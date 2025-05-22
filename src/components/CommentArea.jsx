@@ -42,7 +42,7 @@ const CommentArea = ({ asin }) => {
   }, [asin]); // fetch ogni volta che asin cambia
 
   return (
-    <div className="text-center">
+    <div data-testid="commentArea" className="text-center">
       {isLoading && <Loading />}
       {isError && <Error />}
       <AddComment asin={asin} />
